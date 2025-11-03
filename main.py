@@ -73,11 +73,9 @@ async def checks(ctx, goal, count):
 # ----------------- 1. Discord 봇 초기화 -----------------
 
 def run_discord_bot():
-
-    # 여기는 서비스 배포 시 주석처리 후 환경변수 로드
-    #load_dotenv(find_dotenv())
-    #BOT_TOKEN = os.getenv("BOT_TOKEN")
-    # 여기까지
+    
+    load_dotenv(find_dotenv())
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
 
     bot.run(BOT_TOKEN)
 
